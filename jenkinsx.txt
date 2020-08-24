@@ -25,3 +25,14 @@ jx upgrade ingress
 -------
 Import a project into JenkinsX
 jx import --url https github url
+
+
+--- configure Grafana
+jx create addon  prometheus   (login: admin admin)
+jx create addon grafana
+
+ k exec -ti  grafana-69b5998f55-shj7d env | grep PASS
+ (login:  admin   pasword from pod grafana-69b5998f55-shj7d)
+
+
+
