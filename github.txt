@@ -1,0 +1,27 @@
+curl https://api.github.com/zen
+
+curl https://api.github.com/users/spikkie
+curl https://api.github.com/users/geneesplaats-nl
+curl -i https://api.github.com/users/geneesplaats-nl
+
+
+x-github-media-type: github.v3; format=json
+
+X-Ratelimit-Limit: 60
+X-Ratelimit-Remaining: 49
+
+#Authenticate
+The easiest and best way to authenticate with the GitHub API is by using Basic Authentication via OAuth tokens. OAuth tokens include personal access tokens.
+
+
+Use a -u flag to set your username:
+curl -i -u spikkie:<key> https://api.github.com/users/spikkie
+curl -i -u jenkins-x-bot-geneesplaat-nl:<key> https://api.github.com/users/jenkins-x-bot-geneesplaat-nl
+
+
+curl -i -u jenkins-x-bot-geneesplaat-nl:<key> https://api.github.com/user
+
+#orgs
+curl -i -u spikkie:token https://api.github.com/orgs/geneesplaats-nl/repos
+
+curl -H 'Authorization: token ---' https://api.github.com/orgs/geneesplaats-nl/repos

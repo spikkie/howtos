@@ -1,0 +1,17 @@
+find . -name '*.csv' -exec cp --parents \{\} /target \;
+
+ find . -name '*finished.zip' -exec cp --parents \{\} ./finished_code/ \;
+
+#find all zip files and extract them into its own directory
+ find . -name "*.zip" -exec ~/scripts/unzip_in_place.sh {} \;
+ cat unzip_in_place
+    unzip $1 -d `dirname $1`
+
+
+---
+howtos/commands.txt
+
+
+---
+cat >> EOF > ~/bin/login.sh2
+
